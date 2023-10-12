@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servicios de TI de Juárez</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: beige;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1>Servicios de TI de Juárez</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Ponte en contacto con nuestros expertos</h2>
+                        <ul id="servicios" class="list-group">
+                            <li class="list-group-item">Desarrollo de Aplicaciones Web</li>
+                            <li class="list-group-item">Mantenimiento a equipo de cómputo</li>
+                            <li class="list-group-item">Actualización de Infraestructura de Red</li>
+                            <li class="list-group-item">Hosting</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Consultores</h2>
+                        <ul id="consultores" class="list-group">
+                            <li class="list-group-item">
+                            <img src="foto2.png" alt="Consultor 1" class="img-thumbnail">
+                        <div>
+                            <h4>Francisco Pérez Loya</h4>
+                            <p>paco_perez@consultores.com</p>
+                            <p>Servicio: Desarrollo de Aplicaciones Web</p>
+                        </div>
+                        </li>
+                        <li class="list-group-item">
+                        <img src="foto1.png" alt="Consultor 2" class="img-thumbnail">
+                        <div>
+                        <h4>Luisa Domínguez Rosales</h4>
+                        <p>lucho_dominguez@consultores.com</p>
+                        <p>Servicio: Mantenimiento a equipo de cómputo</p>
+                    </div>
+                    </li>
+                    <!-- Agrega más consultores hasta completar ocho-->
+                    <li class="list-group-item">
+                    <img src="foto3.png" alt="Consultor 3" class="img-thumbnail">
+                    <div>
+                        <h4>Maria Velez Saucedo</h4>
+                        <p>mario_velez@consultores.com</p>
+                        <p>Servicio: Actualización de Infraestructura de Red</p>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <img src="foto4.png" alt="Consultor 4" class="img-thumbnail">
+                    <div>
+                        <h4>Iván Moreno López</h4>
+                        <p>ivan_moreno@consultores.com</p>
+                        <p>Servicio: Hosting</p>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                    <img src="foto6.png" alt="Consultor 5" class="img-thumbnail">
+                    <div>
+                        <h4>Carla Olivas Zapara</h4>
+                        <p>carla_olivas@consultores.com</p>
+                        <p>Servicio: Desarrollo de Aplicaciones Web</p>
+                    </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="foto5.png" alt="Consultor 5" class="img-thumbnail">
+                        <div>
+                            <h4>Josue Gutierrez Gonzalez</h4>
+                            <p>jose_gutierrez@consultores.com</p>
+                            <p>Servicio: Hosting</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="foto7.png" alt="Consultor 5" class="img-thumbnail">
+                        <div>
+                            <h4>Gabriel Sandoval Calderon</h4>
+                            <p>gabriel_sandoval@consultores.com</p>
+                            <p>Servicio: Mantenimiento a equipo de cómputo</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="foto8.png" alt="Consultor 5" class="img-thumbnail">
+                        <div>
+                            <h4>Arleth Soto Ruiz</h4>
+                            <p>arleth_soto@consultores.com</p>
+                            <p>Servicio: Desarrollo de Aplicaciones Web</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(document).ready(function() {
+// Cambiar estilo al hacer clic en un servicio
+$('#servicios li').click(function() {
+$(this).addClass('active').siblings().removeClass('active');
+var servicioSeleccionado = $(this).text();
+// Filtrar la lista de consultores por servicio
+$('#consultores li').each(function() {
+var servicio = $(this).find('p:last').text().split(': ')[1];
+if (servicio === servicioSeleccionado) {
+$(this).show();
+} else {
+$(this).hide();
+}
+});
+});
+});
+</script>
+</body>
+</html>
